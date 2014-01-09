@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>VideoSynchronizer</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    
+    <!-- Should be replace with locally hosted one -->
+    <link href="http://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/4.2/video.js"></script>
+    
+    <script src="main.js" ></script>
+</head>
+<body>
+    <div id="menu">
+        <ul>
+            <li> <a href=index.html > Home </a> </li>
+            <li> <a href=main.html > Reload </a> </li>
+        </ul>
+    </div>
+    <div id="title">
+        <h3>VideoSynchronizer</h3>
+        <p>Watch videos together</p>
+    </div>
+    <div id="main">
+    <div id="player">
+        <video id="myvideo" class="video-js vjs-default-skin" controls > </video>
+    </div>
+    <div id="settings">
+        <form>
+        <p>Link to video: <input type=text name=url value='http://video-js.zencoder.com/oceans-clip.webm' > </p> 
+        <input type=button value="Open" onclick="load( this.form.url.value );" >
+        </form>
+    </div>
+    <div id="debug">
+        <!-- For displaying error messages -->
+    </div>
+    </div>
+    <div id="footer">
+        <p>Developed by Eva Moshkovich and Gergely Patonay</p>
+    </div>
+</body>
+</html>

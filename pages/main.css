@@ -1,0 +1,49 @@
+
+#menu{
+background-color:silver;
+padding:2px;
+}
+#menu ul {
+list-style-type:none;
+overflow:hidden;
+}
+#menu li {
+float:left;
+}
+#menu a {
+display:block;
+width:60px;
+}
+
+#title{
+background-color:gainsboro;
+padding:2px;
+}
+
+#main{
+background-color:silver;
+
+}
+
+#player{
+float:left;
+padding:1px;
+width:60%;
+}
+
+#settings{
+float:left;
+padding:1px;
+}
+
+#debug{
+clear: both;
+
+}
+
+#footer{
+background-color:khaki;
+color:firebrick;
+text-align:center;
+padding:2px;
+}
