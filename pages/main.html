@@ -4,10 +4,11 @@
 <head>
     <title>VideoSynchronizer</title>
     <link rel="stylesheet" type="text/css" href="main.css">
-    
-    <!-- Should be replace with locally hosted one -->
-    <link href="http://vjs.zencdn.net/4.2/video-js.css" rel="stylesheet">
-    <script src="http://vjs.zencdn.net/4.2/video.js"></script>
+
+    <link href="../libs/video-js.css" rel="stylesheet">
+    <script src="../libs/video.js"></script>
+    <script> videojs.options.flash.swf = "../libs/video-js.swf" </script>
+    <script src="../libs/vjs.youtube.js"></script> <!-- it is included but not working -->
     
     <script src="main.js" ></script>
 </head>
