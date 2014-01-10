@@ -8,7 +8,8 @@
     <link href="../libs/video-js.css" rel="stylesheet">
     <script src="../libs/video.js"></script>
     <script> videojs.options.flash.swf = "../libs/video-js.swf" </script>
-    <script src="../libs/vjs.youtube.js"></script> <!-- it is included but not working -->
+  <!--   <script src="video.min.js"></script>-->
+    <script src="../libs/media.youtube.js"></script>
     
     <script src="main.js" ></script>
 </head>
@@ -25,13 +26,28 @@
     </div>
     <div id="main">
     <div id="player">
-        <video id="myvideo" class="video-js vjs-default-skin" controls > </video>
+        <video id="myvideo" class="video-js vjs-default-skin" controls width="600" height="300"> </video>
+         <video id="vid3" src="" class="video-js vjs-default-skin" controls
+           preload="auto" width="640" height="360">
+    </video>
+
+    <script>
+    videojs('vid3', { "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=q1dpQKntj_w" }).ready(function() {
+      // Cue a video using ended event
+      this.one('ended', function() {
+        this.src('http://www.youtube.com/watch?v=jofNR_WkoCE');
+      });
+    });
+    </script>
     </div>
     <div id="settings">
-        <form>
+        <form name = "settingsForm">
         <p>Link to video: <input type=text name=url value='http://video-js.zencoder.com/oceans-clip.webm' > </p> 
         <input type=button value="Open" onclick="load( this.form.url.value );" >
         </form>
+        <script> 
+        var url = document.forms["settingsForm"]["url"].value;
+        if (url != null && url != ''){load(url);}</script>
     </div>
     <div id="debug">
         <!-- For displaying error messages -->
