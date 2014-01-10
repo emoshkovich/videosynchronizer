@@ -27,9 +27,9 @@
     <div id="main">
     <div id="player">
         <video id="myvideo" class="video-js vjs-default-skin" controls width="600" height="300"> </video>
-         <video id="vid3" src="" class="video-js vjs-default-skin" controls
+        <!-- <video id="vid3" src="" class="video-js vjs-default-skin" controls
            preload="auto" width="640" height="360">
-    </video>
+    </video> 
 
     <script>
     videojs('vid3', { "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=q1dpQKntj_w" }).ready(function() {
@@ -38,10 +38,11 @@
         this.src('http://www.youtube.com/watch?v=jofNR_WkoCE');
       });
     });
-    </script>
+    </script> -->
     </div>
     <div id="settings">
         <form name = "settingsForm">
+        <!--test video: http://video-js.zencoder.com/oceans-clip.webm -->
         <p>Link to video: <input type=text name=url value='http://video-js.zencoder.com/oceans-clip.webm' > </p> 
         <input type=button value="Open" onclick="load( this.form.url.value );" >
         </form>
